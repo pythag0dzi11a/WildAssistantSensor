@@ -36,3 +36,11 @@ int getSoilHumidity(int ENABLE_SENSOR,int ANALOG_PIN)
 
     return soilHumidity;
 }
+
+// 这个函数用来读取dataPin上所接热敏电阻的返回数据，返回数据为0到255上值。 
+{
+    pinMode(dataPin, INPUT);
+    int rawTemperature = analogRead(dataPin);
+    tamperature = map(rawTemperature,0,5000,0,255) 
+    return temperature;
+}
